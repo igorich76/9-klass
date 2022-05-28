@@ -1,0 +1,14 @@
+program n_3;
+const n=30;
+begin
+  var a:array[1..n] of integer;
+  for var i:=1 to n do
+  begin
+    a[i]:=Random(50,200);
+    Println('a=',a[i]);
+  end;
+  var s:=0;
+  for var i:=1 to n do
+    s:=s+a[i];
+  Println('s=',s);
+end.
