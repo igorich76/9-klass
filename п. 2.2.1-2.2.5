@@ -1,0 +1,10 @@
+##
+var a:array[1..10] of integer;
+for var i:=1 to 10 do a[i]:=Random(100); 
+Println(a);
+var s:=integer(0);
+for var i:=1 to 10 do s:=s+a[i];
+Println('Сумма массива=',s);
+var imax:=integer(1);
+for var i:=1 to 10 do if (imax < a[i]) then imax:=a[i];
+Print('Макимальный эл-т массива>>',imax);
