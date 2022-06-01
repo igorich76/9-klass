@@ -76,3 +76,21 @@ begin
   //или так:
   Println('Средняя температура за неделю:',Round(c/n)); 
 end.
+
+// сам ваял, без подглядываний и подсказок! По памяти!
+program p2_2_zad_7;
+const n = 7;
+begin
+var a: array [1..n] of string = ('Понедельник>>','Вторник>>','Среда>>','Четверг>>',
+'Пятница>>','Суббота>>','Воскресенье>>');
+var b: array [1..n] of integer;
+var s:=0;
+Println('Введите температуру');
+for var i:=1 to n do
+  begin 
+  Print(a[i]);
+  Readln(b[i]);
+  s:=s+b[i];
+  end;
+Print('Средняя температура за неделю:',Round(s/n));
+end.
