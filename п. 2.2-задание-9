@@ -1,0 +1,16 @@
+##
+var a: array [1..20] of integer;
+var (s2, s3, s4, s5) := (0, 0, 0, 0);
+for var i := 1 to 20 do 
+begin
+  a[i] := Random(2, 5);  
+  if a[i] = 2 then s2 += 1;   
+  if a[i] = 3 then s3 += 1;  
+  if a[i] = 4 then s4 += 1;   
+  if a[i] = 5 then s5 += 1;  
+end;
+Println(a);
+Println('Двоек>>', s2);
+Println('Троек>>', s3);
+Println('Четвёрок>>', s4);
+Println('Пятёрок>>', s5); 
