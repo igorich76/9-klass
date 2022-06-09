@@ -1,0 +1,13 @@
+const n=50;
+var (rost,s):=(0,0);
+begin
+var a: array [1..50] of integer;
+for var i:=1 to n do 
+    begin
+        a[i]:=Random(150,200);
+        rost:=a[i];
+        if rost >= 170 then s+=1;
+    end;
+Println(a);    
+Print('Подходящих кандидатов>>',s);
+end.
