@@ -11,3 +11,21 @@ for var i:=1 to 10 do
 Println(a);
 Println('Макс элемент=',a[max]);
 Println('Всего максимальных элементов=', s);
+////////////////////////////////////////////////////////
+// через год сам повторил:
+## //найти сумму максимальных элементов массива
+
+var a := new integer[11];
+for var i := 0 to 10 do a[i] := Random(1, 10);
+Println('длина массива =', Length(a));
+Println('сам массив =', a);
+
+var (cnt, max) := (0, a[0]); //сразу для max даём значение нулевого элемента массива
+
+for var i := 0 to Length(a) - 1 do if a[i] > max then max := a[i];
+
+for var i := 0 to Length(a) - 1 do if a[i] = max then cnt += 1;
+
+Println('максим элемент =', max);
+Println('их количество =', cnt);
+Println('сумма максимальных =', max * cnt); 
